@@ -6,8 +6,13 @@
   top: 100%;
   padding: 40px 32px;
   min-height: 400px;
+  align-content: flex-start;
 
   .nav__item--open & {
     display: flex;
+  }
+
+  &__list {
+    flex-grow: 1;
   }
 }
