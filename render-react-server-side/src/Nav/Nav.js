@@ -1,46 +1,40 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-import NavSubMenu from "../NavSubMenu";
+import SubMenu from "../SubMenu";
+import formatMenuData from "../helpers/formatMenuData";
 import { navCatagories } from "../testData.json";
 
 import "./Nav.scss";
 
-const generateTitleLinks = () => {
-  return navCatagories.map(
-    ({ url_path, children_data, custom_dropdown_link, fredhopper_id }) => {
-      const [isOpen, setIsOpen] = useState(false);
-
-      const key = fredhopper_id;
-      const navLink = children_data[0]
-        ? children_data[0].url_path
-        : custom_dropdown_link;
-
-      return (
-        <li
-          onMouseEnter={() => {
-            setIsOpen(true);
-          }}
-          onMouseLeave={() => {
-            setIsOpen(false);
-          }}
-          className={classNames("nav__item", {
-            "nav--open": isOpen,
-          })}
-        >
-          <a key={key} className="nav__title" href={navLink} title={url_path}>
-            {url_path}
-          </a>
-          <NavSubMenu childrenData={children_data} />
-        </li>
-      );
-    }
-  );
+const generateMenu = (menuData) => {
+  return menuData.map((menu) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const { name, href, subMenu: SubMenuData } = menu;
+    return (
+      <li
+        key={name + "nav"}
+        onMouseEnter={() => {
+          setIsOpen(true);
+        }}
+        onMouseLeave={() => {
+          setIsOpen(false);
+        }}
+        className={classNames("nav__item", { "nav__item--open": isOpen })}
+      >
+        <a className="nav__anchor" href={href} title={name}>
+          {name}
+        </a>
+        <SubMenu SubMenuData={SubMenuData} />
+      </li>
+    );
+  });
 };
 
-const Nav = (props) => {
+const Nav = () => {
+  const menuData = formatMenuData(navCatagories);
   return (
     <nav className="nav">
-      <ul className="nav__list">{generateTitleLinks()}</ul>
+      <ul className="nav__list">{generateMenu(menuData)}</ul>
     </nav>
   );
 };
