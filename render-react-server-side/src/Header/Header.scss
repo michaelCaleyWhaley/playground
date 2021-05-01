@@ -1,0 +1,62 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0px 32px;
+  box-sizing: border-box;
+
+  &__burger {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+
+    &--desktop-only {
+      display: none;
+      @media screen and (min-width: 992px) {
+        display: flex;
+      }
+    }
+  }
+
+  &__flag {
+    width: 16px;
+    height: 16px;
+    margin: 0px 8px 0px 0px;
+  }
+
+  &__region {
+    width: 23px;
+    height: 12px;
+    margin-right: 4px;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 1px;
+  }
+
+  &__account {
+    width: 16px;
+    height: 18px;
+    margin-left: 24px;
+  }
+
+  &__logo {
+    height: 34px;
+  }
+
+  &__search,
+  &__wishlist,
+  &__bag {
+    width: 18px;
+    margin-left: 10px;
+  }
+}
