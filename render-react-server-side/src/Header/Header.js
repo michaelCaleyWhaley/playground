@@ -25,7 +25,7 @@ const Header = () => {
         </g>
       </svg>
 
-      <div className="header__group header__group--desktop-only">
+      <div className="header__group header__group--left header__group--desktop-only">
         <img
           src="https://www.endclothing.com/static/images/flags/GB.svg"
           alt=""
@@ -76,7 +76,7 @@ const Header = () => {
         ></path>
       </svg>
 
-      <div className="header__group">
+      <div className="header__group header__group--right">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="14"

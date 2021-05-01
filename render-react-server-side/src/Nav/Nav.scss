@@ -1,13 +1,29 @@
 .nav {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 38px;
-  border-top: 1px solid rgb(242, 242, 242);
-  border-bottom: 1px solid rgb(242, 242, 242);
+  position: absolute;
+  left: -100%;
+  @media (min-width: 992px) {
+    left: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    border-top: 1px solid rgb(242, 242, 242);
+    border-bottom: 1px solid rgb(242, 242, 242);
+  }
+
+  &__list {
+    height: 100%;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
 
   &__title {
+    display: inline-block;
     padding: 8px 16px 6px;
     font-size: 12px;
     font-family: ProximaNova-Semibold, "Helvetica Neue", Verdana, Arial,
