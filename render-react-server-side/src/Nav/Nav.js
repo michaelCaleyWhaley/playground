@@ -42,7 +42,7 @@ const generateMenu = (menuData) => {
                 id="Header/mobile/default"
                 transform="translate(-266.000000, -62.000000)"
                 fill="#1A1A1A"
-                fill-rule="nonzero"
+                fillRule="nonzero"
               >
                 <g id="Group" transform="translate(118.000000, 50.000000)">
                   <polygon
