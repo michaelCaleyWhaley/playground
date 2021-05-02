@@ -9,7 +9,7 @@ import "./Nav.scss";
 const generateMenu = (menuData) => {
   return menuData.map((menu) => {
     const [isOpen, setIsOpen] = useState(false);
-    const { name, href, subMenu: SubMenuData } = menu;
+    const { name, href, subMenu: SubMenuData, imageColumns } = menu;
     return (
       <li
         key={name + "nav"}
@@ -24,7 +24,7 @@ const generateMenu = (menuData) => {
         <a className="nav__anchor" href={href} title={name}>
           {name}
         </a>
-        <SubMenu SubMenuData={SubMenuData} />
+        <SubMenu SubMenuData={SubMenuData} imageColumns={imageColumns} />
       </li>
     );
   });

@@ -51,7 +51,7 @@ const formatMenuData = (data) => {
     href: `/${item.url_path}`,
     excludeOnMobile: item.exclude_on_mobile === 1,
     subMenu: formatSubMenu(item.children_data),
-    imageColumns: [
+    imageColumns: item.dropdown_image_url1 && [
       [
         {
           imgSrc: item.dropdown_image_url1,

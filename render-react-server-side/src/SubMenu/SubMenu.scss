@@ -15,4 +15,55 @@
   &__list {
     flex-grow: 1;
   }
+
+  &__item {
+    display: block;
+    margin-bottom: 10px;
+
+    &--header {
+      font-size: 1rem;
+      font-family: ProximaNova-Semibold, "Helvetica Neue", Verdana, Arial,
+        sans-serif;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+      line-height: 22px;
+      height: 38px;
+    }
+  }
+
+  &__anchor {
+    font-family: ProximaNova-Regular, "Helvetica Neue", Verdana, Arial,
+      sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: 0.35px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    vertical-align: baseline;
+  }
+
+  &__img-column {
+    width: 30%;
+    box-sizing: border-box;
+    padding: 0 15px;
+  }
+
+  &__img-title {
+    margin: 0;
+    font-size: 14px;
+    font-family: ProximaNova-Semibold, "Helvetica Neue", Verdana, Arial,
+      sans-serif;
+    letter-spacing: 1.4px;
+    line-height: 18.2px;
+    text-transform: uppercase;
+    padding: 0px 0px 8px;
+  }
+
+  &__img {
+    width: 100%;
+  }
 }
