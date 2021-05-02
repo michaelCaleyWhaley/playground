@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({ openMenu }) => {
   return (
     <header className="header">
       <svg
@@ -11,6 +11,7 @@ const Header = () => {
         height="14"
         viewBox="0 0 20 14"
         className="header__burger"
+        onClick={openMenu}
       >
         <g fill="none" fillRule="evenodd" stroke="none" strokeWidth="1">
           <g fill="#1A1A1A" transform="translate(-32 -45)">

@@ -1,17 +1,9 @@
-import React, { useState, memo } from "react";
+import React, { memo } from "react";
 import classNames from "classnames";
 
 import "./SubMenu.scss";
 
 const SubMenu = ({ SubMenuData, imageColumns = [] }) => {
-  useState(() => {
-    setTimeout(() => {
-      document
-        .querySelectorAll(".nav__item")[1]
-        .classList.add("nav__item--open");
-    }, 500);
-  }, []);
-
   return (
     <div className="sub-menu">
       {SubMenuData.map((menu) => {
